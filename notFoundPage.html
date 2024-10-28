@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Not Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary position-fixed py-0 w-100">
+        <div class="container-fluid bg-dark">
+            <!-- Ícone visível em tamanhos médios (md), pequenos (sm) e muito pequenos (xs) -->
+            <i class="fa-solid fa-bars text-white m-2 d-lg-none d-md-block d-sm-block d-xs-block"></i>
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-film text-white m-1" onclick="goToHomePage()"
+                    onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='auto'"></i>
+                <a class="navbar-brand text-white" onclick="goToHomePage()" onmouseover="this.style.cursor='pointer'"
+                    onmouseout="this.style.cursor='auto'">Movies</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+
+    </nav>
+    <div class="d-flex flex-column align-items-center pt-5">
+        <h2>Nothing to show here :/</h2>
+        <i class="fa-brands fa-creative-commons-zero fa-5x"></i>
+        <p>Results</p>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

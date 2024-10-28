@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movies Data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary position-fixed py-0 w-100">
+        <div class="container-fluid bg-dark">
+            <!-- Ícone visível em tamanhos médios (md), pequenos (sm) e muito pequenos (xs) -->
+            <i class="fa-solid fa-bars text-white m-2 d-lg-none d-md-block d-sm-block d-xs-block"></i>
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-film text-white m-1" onclick="goToHomePage()"
+                    onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='auto'"></i>
+                <a class="navbar-brand text-white" onclick="goToHomePage()" onmouseover="this.style.cursor='pointer'"
+                    onmouseout="this.style.cursor='auto'">Movies</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" onclick="fetchTopMovies()"
+                            onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='auto'">Top
+                            Movies</a>
+                    </li>
+
+                </ul>
+                <div class="w-300px">
+
+                    <form class="d-flex input-group " role="search">
+                        <input class="form-control " type="search" placeholder="Search" id="search" aria-label="Search">
+                        <button class=" btn btn-outline-info" type="button" onclick="searchMovie(this)">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container pt-5">
+        <div class="movies-container row  " id="main-container">
+
+
+        </div>
+    </div>
+
+
+
+    <div class="footer d-flex justify-content-center fixed-bottom">
+        <button type="button" class="btn btn-light text-primary" onclick="backPages()" id="backPage">&lt;
+            &lt;</button>
+        <button type="button" class="btn btn-light text-primary" onclick="nextPages()" id="nextPage">&gt;&gt;</button>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Search error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please input some text to search for movies.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
