@@ -1,1 +1,3 @@
 "# MovieWork" 
+
+Este projeto é uma aplicação web para exibir informações sobre filmes, utilizando tecnologias como HTML, CSS e JavaScript, e dados de uma API. Ele inclui uma página inicial que lista filmes populares ou pesquisados, permitindo que o utilizador explore detalhes de cada filme. Ao clicar em um filme, o utilizador é redirecionado para uma página específica com informações detalhadas, como título, descrição, avaliação e poster. Caso ocorra um erro ou o filme não seja encontrado, uma página dedicada informa o problema. O design é responsivo, e o código utiliza fetch para integrar os dados da API.
